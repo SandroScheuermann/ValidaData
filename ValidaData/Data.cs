@@ -12,6 +12,7 @@ namespace Data
             dataArray = data.Split('/');
             Validar();
         }
+
         public void Validar()
         {
             try
