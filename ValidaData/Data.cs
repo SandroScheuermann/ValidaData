@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Data
+namespace ValidaData
 {
-    class Data
+    public class Data
     {
         string[] dataArray;
         string data;
@@ -13,7 +13,7 @@ namespace Data
             Validar();
         }
 
-        public void Validar()
+        public bool Validar()
         {
             try
             {
@@ -46,10 +46,12 @@ namespace Data
                     throw new Exception("Ano inválido\n");
 
                 Console.WriteLine(data + "\n");
+                return true;
             }
             catch (Exception dataInvalida)
             {
                 Console.WriteLine(dataInvalida.Message);
+                return false;
             }
         }
     }
